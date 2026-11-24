@@ -97,7 +97,7 @@ simpleWallet/
     └── test/
         └── java/
 ```
-[Full File Structure](./file-structure.md)
+[Full File Structure](./docs/file-structure.md)
 
 Some modules represent planned functionality and may not exist in the current codebase yet.
 
@@ -199,7 +199,7 @@ Planned endpoint groups:
 | Products | `/api/v1/products` | Browse products |
 | Orders | `/api/v1/orders` | Manage orders |
 
-[SimpleWallet API Full Documentation](./simplewallet-api-docs.md)
+[SimpleWallet API Full Documentation](./docs/simplewallet-api-docs.md)
 
 These paths are proposed examples, not a guarantee of currently implemented routes. Update this table to match the actual controllers and mappings.
 
@@ -256,11 +256,11 @@ Recommended test coverage includes:
 - [x] Complete authentication and JWT security
 - [x] Implement user profile APIs
 - [x] Implement wallet creation and balance operations
-- [ ] Implement deposits and withdrawals
+- [x] Implement deposits and withdrawals
 - [x] Add transaction history
-- [ ] Implement payment methods
-- [ ] Add product and order management
-- [ ] Add administrative APIs
+- [x] Implement payment methods
+- [x] Add product and order management
+- [x] Add administrative APIs
 - [ ] Add API documentation
 - [ ] Add integration tests
 - [ ] Add Docker support
