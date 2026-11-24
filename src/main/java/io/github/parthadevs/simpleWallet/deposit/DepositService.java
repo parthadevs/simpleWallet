@@ -91,9 +91,6 @@ public class DepositService {
         return mapToDepositResponse(deposit);
     }
 
-    // ==========================================
-    // Admin Only: Approval Logic
-    // ==========================================
     @Transactional
     public DepositResponse approveDeposit(String reference, String adminNote) {
         Deposit deposit = depositRepository.findByReference(reference)
@@ -115,7 +112,6 @@ public class DepositService {
         deposit.setAdminNote(adminNote);
         Deposit updatedDeposit = depositRepository.save(deposit);
 
-        // Record Audit Transaction (Double Entry)
         String trxReference = "TRX-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
         Transaction transaction = Transaction.builder()
                 .user(deposit.getUser())
@@ -148,5 +144,9 @@ public class DepositService {
                 .adminNote(deposit.getAdminNote())
                 .createdAt(deposit.getCreatedAt())
                 .build();
+    }
+
+    public DepositResponse reviewDepositById(Long depositId, String decision, String adminNote) {
+        throw new UnsupportedOperationException("Unimplemented method 'reviewDepositById'");
     }
 }

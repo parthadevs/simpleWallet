@@ -71,7 +71,7 @@ public class Transaction {
     private TransactionStatus status = TransactionStatus.COMPLETED;
 
     @Column(nullable = false, unique = true, length = 64)
-    private String reference; // Unique Transaction TRX-ID (e.g., TRX-20261102-XXXX)
+    private String reference;
 
     @Column(length = 255)
     private String description;
@@ -87,16 +87,12 @@ public class Transaction {
         }
     }
 
-    // ==========================================
-    // Enums for Transaction Classification
-    // ==========================================
-
     public enum TransactionType {
         DEPOSIT,
         WITHDRAWAL,
         TRANSFER,
         PAYMENT,
-        REFUND
+        REFUND, ADJUSTMENT
     }
 
     public enum TransactionDirection {

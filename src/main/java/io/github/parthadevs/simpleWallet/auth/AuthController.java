@@ -6,7 +6,6 @@ import io.github.parthadevs.simpleWallet.auth.dto.RegisterRequest;
 import io.github.parthadevs.simpleWallet.common.exception.ResourceNotFoundException;
 import io.github.parthadevs.simpleWallet.common.response.ApiResponse;
 import io.github.parthadevs.simpleWallet.user.User;
-import io.github.parthadevs.simpleWallet.user.dto.UserResponse;
 import io.github.parthadevs.simpleWallet.user.dto.UserSummaryDto;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
